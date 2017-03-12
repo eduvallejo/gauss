@@ -1,0 +1,25 @@
+<!-- v13  se incluye una  reticula : drawReticula -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gauss</title>
+    <script src="js/draw.js"></script>
+    <script src="js/getposition.js"></script>
+</head>
+<body onload="draw()"> <!-- Este es el correcto, los demas son para debug -->
+<canvas id="myCanvas"  style="border:1px solid #000000;">
+</canvas> 
+<div></div>
+
+</body>
+<script type>
+	var Area1 = 100;
+	var Area2 = 2;
+	var Area3 = 3;
+	canvas = document.getElementById("myCanvas");
+	canvas.width = 400;
+	canvas.height = 400;
+	ctx = canvas.getContext("2d");
+</script>
+</html>
