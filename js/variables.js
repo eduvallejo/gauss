@@ -14,14 +14,14 @@ var count = 0;
 var interval = 30;
 // console.log("grid1 : [" + i + "][" + j + "]= "+ grid1[i][j] + ", grid2 : [" + i + "][" + j + "]= " + grid2[i][j]);				
 
-var canvasHeight = 4;
+var canvasHeight = 3;
 //zoom = zoom
 var zoom = 1;
 var canvasWidth = canvasHeight;
 var halfCanvasWidth = canvasWidth/2;
 var halfCanvasHeight = canvasHeight/2;
-var canvasWidthDec = canvasWidth*10;
-var canvasHeightDec = canvasHeight*10;
+var canvasWidthDec = canvasWidth*300;
+var canvasHeightDec = canvasHeight*300;
 var c = math.complex();
 // c = math.complex(-0.687,+0.312);
 // c = math.complex( -1.375 );

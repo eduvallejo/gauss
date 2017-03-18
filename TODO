@@ -9,4 +9,8 @@ hacer q los pixels correspondan a los decimales
 redondear los canvasWidth/2 cuando el numero es impar(que es cuando queda centrado el cto de julia)
 
 HECHOcrear una matriz con el valor del numero complejo para poder aplicar la formula reiterativamente z=z²+c
-ahora ampliar de 10divisiones a 100(por ejemplo), para mas detalle(como la regla q mide la costa)
+ahora ampliar de 10divisiones a 100(por ejemplo), para mas detalle(como la regla q mide la costa), o quizas dividir el resultado para que haya mas puntos con valor dentro del conjunto de julia
+
+color-asignar un color en funcion del numero de iteraciones necesarias para salir del conjkunto
+
+parece q el mandelbrot, segun puthon, no usa las coordenadas de z para hallar su modulo y ñuego sumarle c sino q usa las coordenadas de z para dar valor a c -> c=z.real+z.imag
