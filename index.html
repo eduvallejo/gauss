@@ -3,13 +3,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>gauss</title>
+    <title></title>
+    <script src="js/math.js" type="text/javascript"></script>
     <script src="js/draw.js"></script>
     <script src="js/getposition.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/initGrids.js"></script>
+    <script src="js/checkRulesAndDraw.js"></script>
+    <script src="js/changeVariables.js"></script>
 </head>
-<body onload="draw()"> <!-- Este es el correcto, los demas son para debug -->
+<body onload="init()"> <!-- Este es el correcto, los demas son para debug -->
 <canvas id="myCanvas"  style="border:1px solid #000000;">
 </canvas> 
+<button  onclick='drawGrid()'>nextGen</button>
 <div></div>
 
 </body>
@@ -18,8 +25,8 @@
 	var Area2 = 2;
 	var Area3 = 3;
 	canvas = document.getElementById("myCanvas");
-	canvas.width = 400;
-	canvas.height = 400;
+	// canvas.width = 10;
+	// canvas.height = 10;
 	ctx = canvas.getContext("2d");
 </script>
 </html>

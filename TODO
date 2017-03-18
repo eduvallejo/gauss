@@ -1,0 +1,12 @@
+http://www.21stcenturysciencetech.com/reir/Fundamental.pdf continuar por:
+
+http://mathjs.org/docs/expressions/syntax.html
+http://mathjs.org/docs/datatypes/complex_numbers.html
+DONEseguir por el calcularSet de draw.js, comprobando si lo q ha de ser menor que 2 es el modulo del numero complejo y como se calcula el modulo con mathjs
+
+hacer q los pixels correspondan a los decimales
+
+redondear los canvasWidth/2 cuando el numero es impar(que es cuando queda centrado el cto de julia)
+
+HECHOcrear una matriz con el valor del numero complejo para poder aplicar la formula reiterativamente z=z²+c
+ahora ampliar de 10divisiones a 100(por ejemplo), para mas detalle(como la regla q mide la costa)

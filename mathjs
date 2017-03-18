@@ -1,0 +1,54 @@
+Complex numbers , parece que hay dos formas de declararlos
+1)--------------------------------------------------------------------- 
+var a = math.complex(2, 3);     // Complex 2 + 3i
+a.re;                           // Number 2
+a.im;                           // Number 3
+
+var b = math.complex('4 - 2i'); // Complex 4 - 2i
+b.re = 5;                       // Number 5
+b;                              // Complex 5 - 2i
+
+Calculations
+
+Most functions of math.js support complex numbers. Complex and real numbers can be used together.
+
+var a = math.complex(2, 3);     // Complex 2 + 3i
+var b = math.complex('4 - 2i'); // Complex 4 - 2i
+
+math.re(a);                     // Number 2
+math.im(a);                     // Number 3
+math.conj(a);                   // Complex 2 - 3i
+
+math.add(a, b);                 // Complex 6 + i
+math.multiply(a, 2);            // Complex 4 + 6i
+math.sqrt(-4);                  // Complex 2i
+
+
+2)----------------------------------------------------------------------
+Complex numbers can be created using the imaginary unit i, which is defined as i^2 = -1. Complex numbers have a real and complex part, which can be retrieved using the functions re and im.
+
+var parser = math.parser();
+
+// create complex numbers
+parser.eval('a = 2 + 3i');  // Complex, 2 + 3i
+parser.eval('b = 4 - i');   // Complex, 4 - i
+
+// get real and imaginary part of a complex number
+parser.eval('re(a)');       // Number,  2
+parser.eval('im(a)');       // Number,  3
+
+// calculations with complex numbers
+parser.eval('a + b');       // Complex, 6 + 2i
+parser.eval('a * b');       // Complex, 11 + 10i
+parser.eval('i * i');       // Number,  -1
+parser.eval('sqrt(-4)');    // Complex, 2i
+
+Math.js does not automatically convert complex numbers with an imaginary part of zero to numbers. They can be converted to a number using the function number.
+
+// convert a complex number to a number
+var parser = math.parser();
+parser.eval('a = 2 + 3i');  // Complex, 2 + 3i
+parser.eval('b = a - 3i');  // Complex, 2 + 0i
+parser.eval('number(b)');   // Number,  2
+parser.eval('number(a)');   // Error: 2 + i is no valid number
+
