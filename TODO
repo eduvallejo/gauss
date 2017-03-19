@@ -15,4 +15,10 @@ color-asignar un color en funcion del numero de iteraciones necesarias para sali
 
 parece q el mandelbrot, segun puthon, no usa las coordenadas de z para hallar su modulo y ñuego sumarle c sino q usa las coordenadas de z para dar valor a c -> c=z.real+z.imag
 
+<<<<<<< HEAD
 mostrar solo la generacion X parea ganar tiempo, es decir mostrar solo el resuyltado final
+=======
+probar lo del color de los pixels haciendo rectangulos con area=1
+
+computar las series y mostrar solo la ultima de modo q se puedan hacer matrices mas grandes
+>>>>>>> 4cadb3e2a899dcad19df5bfa3d39a06e6145f0a8
