@@ -14,3 +14,5 @@ ahora ampliar de 10divisiones a 100(por ejemplo), para mas detalle(como la regla
 color-asignar un color en funcion del numero de iteraciones necesarias para salir del conjkunto
 
 parece q el mandelbrot, segun puthon, no usa las coordenadas de z para hallar su modulo y ñuego sumarle c sino q usa las coordenadas de z para dar valor a c -> c=z.real+z.imag
+
+mostrar solo la generacion X parea ganar tiempo, es decir mostrar solo el resuyltado final

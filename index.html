@@ -14,9 +14,12 @@
     <script src="js/changeVariables.js"></script>
 </head>
 <body onload="init()"> <!-- Este es el correcto, los demas son para debug -->
+<button  onclick='drawGrid()'>start</button>
+press "q" to stop
+<br>
 <canvas id="myCanvas"  style="border:1px solid #000000;">
 </canvas> 
-<button  onclick='drawGrid()'>nextGen</button>
+
 <div></div>
 
 </body>
@@ -28,5 +31,15 @@
 	// canvas.width = 10;
 	// canvas.height = 10;
 	ctx = canvas.getContext("2d");
+
+	//eventos asociados a teclas
+	window.onkeyup = function(e) {
+	  var key = e.keyCode ? e.keyCode : e.which;
+	   //13 enter, 8 backspace, 37left
+	   //$resultado = ($a>$b) ? "A es Mayor que B":"B es Mayor que A";
+	  if (key == 81) {//"q" para escribir o solo moverse
+	  	clearTimeout(bucle);
+	  }
+	}
 </script>
 </html>

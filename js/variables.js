@@ -9,30 +9,36 @@ var gridZ = [];
 var totalFuera = 0;
 var temporalGrid = [];//para lo del resize en marcha
 
-var mousePos;
 var count = 0;
-var interval = 30;
+var interval = 50;
 // console.log("grid1 : [" + i + "][" + j + "]= "+ grid1[i][j] + ", grid2 : [" + i + "][" + j + "]= " + grid2[i][j]);				
 
-var canvasHeight = 3;
+var canvasWidth = 3;
 //zoom = zoom
 var zoom = 1;
-var canvasWidth = canvasHeight;
+var gridDivision = 500;
+var canvasHeight = canvasWidth-1;
 var halfCanvasWidth = canvasWidth/2;
 var halfCanvasHeight = canvasHeight/2;
-var canvasWidthDec = canvasWidth*300;
-var canvasHeightDec = canvasHeight*300;
+var canvasWidthDec = canvasWidth*gridDivision;
+var canvasHeightDec = canvasHeight*gridDivision;
 var c = math.complex();
 // c = math.complex(-0.687,+0.312);
-// c = math.complex( -1.375 );
-c = math.complex(-0.75); //mandelbrot
-// c = math.complex(0.27, 0.01); //espiral
-// c = math.complex(0.36, 0.32); //espiral
-// c = math.complex(-0.74, 0.12); //espiral
-// c = math.complex(-0.75, 0.03); //espiral
+// c = math.complex(-0.123 ,0.745); //conejo douady
+// c = math.complex(0, 1);//dendrita (frontera mandelbrot)/**/
+// c = math.complex(0.391, 0.587);//disco de siegel)/**/
+c = math.complex( -1.375 );//cool
+// c = math.complex(-0.75); //mandelbrot
+// c = math.complex(-0.75); //san marco
+c = math.complex(0.27, 0.01); //cerebro espiral
+c = math.complex(0.36, 0.32); //espiral italia
+c = math.complex(-0.74, 0.12); //espiral dragon costa grecia
+// c = math.complex(-0.75, 0.03); //san marco inclinado
 // c = math.complex(0.37, 0.28); //espiral
-// c = math.complex(-0.8 ,0.156); //espiral
-// c = math.complex(0.360 + 0.1003); //espiral
+// c = math.complex(-0.8 ,0.156); //espiral bola drac
+// c = math.complex(0.360 , 0.1003); //espiral
+// c = math.complex(-0.123 , 0.745);//empty brain
+// c = math.complex(-0.687,0.312);//
 
 var neighboursAlive;
 var numGenerations = 0;
