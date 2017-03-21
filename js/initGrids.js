@@ -4,7 +4,6 @@ function init(argument) {
 	canvas = document.getElementById("myCanvas");
 	canvas.width = canvasWidthDec;
 	canvas.height = canvasHeightDec;
-		console.log("prueba");
 
 	initGrids();//darle valor cero a las grids cuando ya sabemos el width
 
@@ -21,19 +20,20 @@ function initGrids(argument) {
 		};
 	}
 	
-	// var gridZ = [];
+	// var gridZ = []; tb inicializamos gridColor
 	for (var i = 0; i < canvasWidth * gridDivision; i++) {
 		gridZ[i]=[];
+		gridColor[i] = [];
+		colorSet[i] = [];		
 		for (var j = 0; j < canvasHeight * gridDivision; j++) {
 			gridZ[i][j] = math.complex(i/gridDivision - halfCanvasWidth, j/gridDivision - halfCanvasHeight);
 			var set = math.complex();
 			var z = math.complex();
-			// console.log("gridZ[" + i + "][ "+ j + "] : " + gridZ[i][j]);
-			
 			set = gridZ[i][j];
-			var modulus = math.complex(set.re*set.re + set.im*set.im);
-			// console.log("modulus : " + modulus);
+			// var modulus = math.complex(set.re*set.re + set.im*set.im);
 			
+			gridColor[i][j] = 0;	
+			colorSet[i][j]	= false;	
 
 		};
 	}

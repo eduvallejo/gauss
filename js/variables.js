@@ -5,6 +5,14 @@ var parser = math.parser();
 
 var grid1 = [];
 var gridZ = [];
+var gridColor = [];
+// var colorWhite = "FFFFFF";
+var colorPixel = 255;
+var c1 = 'ff';
+var c2 = '010101';
+var c1Integer = parseInt(c1, 16);
+var colorSet = [];
+
 
 var interval = 50;
 // console.log("grid1 : [" + i + "][" + j + "]= "+ grid1[i][j] + ", grid2 : [" + i + "][" + j + "]= " + grid2[i][j]);				
@@ -12,8 +20,8 @@ var interval = 50;
 var canvasWidth = 3;
 //zoom = zoom
 var zoom = 1;
-var gridDivision = 500;
-var maxIterations = 40;
+var gridDivision = 100;
+var maxIterations = 20;
 //lo de abajo se usa en patrones planos, para horrar computos
 var canvasHeight = canvasWidth-1;
 var halfCanvasWidth = canvasWidth/2;
@@ -31,7 +39,7 @@ c = math.complex(-0.123 ,0.745); //conejo douady
 // c = math.complex(-0.75); //san marco
 // c = math.complex(0.27, 0.01); //cerebro espiral
 // c = math.complex(0.36, 0.32); //espiral italia
-// c = math.complex(-0.74, 0.12); //espiral dragon costa grecia
+c = math.complex(-0.74, 0.12); //espiral dragon costa grecia
 // c = math.complex(-0.75, 0.03); //san marco inclinado
 // c = math.complex(0.37, 0.28); //espiral
 // c = math.complex(-0.8 ,0.156); //espiral bola drac

@@ -9,10 +9,19 @@ function checkRules(argument) {
 				gridZ[i][j] = math.multiply(gridZ[i][j], gridZ[i][j]);
 				gridZ[i][j] = math.add (gridZ[i][j] , c);
 				// console.log("gridZ[" + i + "][ "+ j + "] : " + gridZ[i][j]);
+				set = gridZ[i][j];
+				var modulus = math.complex(set.re*set.re + set.im*set.im);
+				if ((modulus >= 2 || modulus <= -2) && colorSet[i][j] == false) {
+					colorSet[i][j] = true;
+					gridColor[i][j] = numGenerations ;//125 = rojo
+					// console.log("modulus : " + modulus);
+					// console.log("gridColor[" + i + "][" + j + "] : " + gridColor[i][j]);
+					
+				}
 			}
 		}
 		numGenerations++;
-		console.log("numGenerations : " + numGenerations);
+		// console.log("numGenerations : " + numGenerations);
 	}//end while
 	for (var i = 0; i < canvasWidth * gridDivision; i++) {
 		for (var j = 0; j < canvasHeight * gridDivision; j++) {
@@ -22,8 +31,22 @@ function checkRules(argument) {
 			// console.log("modulus : " + modulus);
 				// console.log("i, j  : " + i + ", " + j );
 				
-				// grid1[i][j] = 1;
-				ctx.fillRect(i*zoom,j*zoom,zoom,zoom)
+				// (parseInt(c1, 16) + parseInt(c2, 16)).toString(16);
+				
+				// colorPixel = (parseInt(c1, 16) + parseInt(c2, 16)).toString(16);
+				ctx.fillStyle= "#000000";
+				ctx.fillRect(i*zoom,j*zoom,zoom,zoom);
+			}else{
+				c1Integer = gridColor[i][j]  ;
+				// console.log("c1Integer : " + c1Integer);
+
+				colorPixel = c1Integer.toString(16) ;
+				var colorHex = "#80" + colorPixel + "000";
+				// console.log("colorHex : " + colorHex);
+				
+				ctx.fillStyle= colorHex;
+				ctx.fillRect(i*zoom,j*zoom,zoom,zoom);
+
 			}
 		}
 	}
