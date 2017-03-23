@@ -17,3 +17,10 @@ parece q el mandelbrot, segun puthon, no usa las coordenadas de z para hallar su
 
 calcular solo un cuadrante para poder profundizar
 
+hacer los calculos en php para q no se cuelgue el navegador y poder ver las transiociones online aunq sean con una grid grande
+
+SVG https://www.w3schools.com/graphics/svg_rect.asp
+
+eliminar los puntos de julia negros y convertirlos al color del pixel mas cercano(dendrita sobretodo ya q quedan pocos dentro)
+
+parece q la saturacion de un color se puede conseguir manteniendo el ff en el rojo y subiendo a la vez el verde y el azul ff0000 -> ff1010 -> ffafaf

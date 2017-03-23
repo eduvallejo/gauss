@@ -13,12 +13,12 @@ function init(argument) {
 //darle valor 0 a las grids una vez sabemos el tamaño del canvas 
 function initGrids(argument) {
 	//los dos loops se pueden hacer en uno solo
-	for (var i = 0; i < canvasWidth ; i++) {
-		grid1[i]=[];
-		for (var j = 0; j < canvasHeight; j++) {
-			grid1[i][j] = 0;
-		};
-	}
+	// for (var i = 0; i < canvasWidth*gridDivision ; i++) {
+	// 	grid1[i]=[];
+	// 	for (var j = 0; j < canvasHeight*gridDivision; j++) {
+	// 		grid1[i][j] = 0;
+	// 	};
+	// }
 	
 	// var gridZ = []; tb inicializamos gridColor
 	for (var i = 0; i < canvasWidth * gridDivision; i++) {
